@@ -40,6 +40,7 @@ Comments
 TODO
 ====
 
+* In-buffer debugging
 * # spaces vary for filetype (do just ruby, python, java, 4 default)
 * Language-specific folding (python folding -- in video?, java), default
   based on indent
