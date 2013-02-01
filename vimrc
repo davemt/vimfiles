@@ -46,6 +46,7 @@ set foldlevel=1       " this is just what i use
 " Formatting, Movement
 set expandtab                   " insert spaces instead of tabs
 set tabstop=4                   " tabs are 4 spaces
+set softtabstop=4
 set shiftwidth=4                " tabs under smart indent
 set autoindent                  " copy current line indent to next line
 set backspace=start,indent,eol  " what we can backspace over
@@ -134,8 +135,8 @@ Bundle 'honza/snipmate-snippets'
 " TODO: This is only a temporary repo; the vim-scripts/Conque-Shell repo is
 "  missing the python module directory autoload/conque_term!
 Bundle 'acx0/Conque-Shell'
-" Visual representation of marks (toggle with <Leader>mt)
-Bundle 'ShowMarks'
+" Puppet syntax, snippits for snipmate, etc.
+Bundle 'rodjek/vim-puppet'
 
 " NOTE! This must be set after Vundle Bundles declared
 " Attempt to determine the type of a file based on its name and possibly its
@@ -145,5 +146,6 @@ filetype indent plugin on
 
 " Plug-in settings and key mappings
 map <Leader>t :execute 'NERDTreeToggle' . getcwd()<Esc>
+map <Leader>T :execute 'NERDTree'<Esc>
 map <Leader>f :CommandT<Esc>
 let g:pyflakes_use_quickfix=0
