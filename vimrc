@@ -57,8 +57,16 @@ let java_highlight_java_lang_ids=1
 syntax enable
 
 " highlight trailing whitespace
-highlight WhitespaceEOL ctermbg=red guibg=red
-match WhitespaceEOL /\s\+$/
+match ExtraWhitespace /\s\+$/
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+" TODO: Had to add these two lines b/c otherwise highlighting did not work
+"  when entering file types defined in ftdetect (at least python, ruby). Why?
+autocmd BufWinEnter * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd InsertLeave * highlight ExtraWhitespace ctermbg=red guibg=red
 
 " uncomment to open QuickFix window after :grep
 "autocmd QuickFixCmdPost *grep* cwindow
