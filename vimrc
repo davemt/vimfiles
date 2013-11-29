@@ -148,7 +148,7 @@ NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
 "" Support for Textmate-style snippits, and a library of snippits
 NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'honza/snipmate-snippets'
+NeoBundle 'honza/vim-snippets'
 "" Puppet syntax, snippits for snipmate, etc.
 NeoBundle 'rodjek/vim-puppet'
 "" Advanced matching for %
