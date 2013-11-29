@@ -57,8 +57,8 @@ let java_highlight_java_lang_ids=1
 syntax enable
 
 " highlight trailing whitespace
-match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
@@ -100,55 +100,61 @@ nnoremap <space> za
 vnoremap <space> zf
 nnoremap <S-space> zO
 
-" Vundle for plug-in management
+" NeoBundle for plug-in management
 "
-" (see http://github.com/gmarik/vundle)
+" (see https://github.com/shougo/neobundle.vim)
 "
 " Brief help
-"  :BundleList          - list configured bundles
-"  :BundleInstall(!)    - install(update) bundles
-"  :BundleSearch(!) foo - search(or refresh cache first) for foo
-"  :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"  :NeoBundleList          - list configured bundles
+"  :NeoBundleInstall(!)    - install(update) bundles
+"  :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
-" See :h vundle for more details
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
+" See :h neobundle for more details
 
-" Vundle Bundles
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" NeoBundle Bundles
 " NOTE: comments after Bundle commands are not allowed
 "
+" TODO this still needed?
 filetype off " required! it is turned on after Bundles are declared
 
-" let Vundle manage Vundle -- required!
-Bundle 'gmarik/vundle'
-" Command-T plug-in: fuzzy-find and open files *very* quickly
-Bundle 'Command-T'
-" Highlight python errors (syntax, import, etc.)
-Bundle 'kevinw/pyflakes-vim'
-" NERD Tree file explorer
-Bundle 'scrooloose/nerdtree'
-" Really awesome git wrapper
-Bundle 'tpope/vim-fugitive'
-" Manipulate 'surroundings': parentheses, brackets, quotes, HTML tags, and more
-Bundle 'tpope/vim-surround'
-" Allows using '.' to repeat plugin maps, not just built-in commands
-Bundle 'tpope/vim-repeat'
-" Requirements for vim-snipmate (see below)
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-" Support for Textmate-style snippits, and a library of snippits
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/snipmate-snippets'
-" Interactive shell within a Vim buffer!
-" TODO: This is only a temporary repo; the vim-scripts/Conque-Shell repo is
-"  missing the python module directory autoload/conque_term!
-Bundle 'acx0/Conque-Shell'
-" Puppet syntax, snippits for snipmate, etc.
-Bundle 'rodjek/vim-puppet'
-" Advanced matching for %
-Bundle 'matchit.zip'
-" Scala language
-Bundle 'derekwyatt/vim-scala'
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Recommended to install
+" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'Shougo/vimproc'
+
+"" Command-T plug-in: fuzzy-find and open files *very* quickly
+NeoBundle 'Command-T'
+"" Highlight python errors (syntax, import, etc.)
+NeoBundle 'kevinw/pyflakes-vim'
+"" NERD Tree file explorer
+NeoBundle 'scrooloose/nerdtree'
+"" Really awesome git wrapper
+NeoBundle 'tpope/vim-fugitive'
+"" Manipulate 'surroundings': parentheses, brackets, quotes, HTML tags, and more
+NeoBundle 'tpope/vim-surround'
+"" Allows using '.' to repeat plugin maps, not just built-in commands
+NeoBundle 'tpope/vim-repeat'
+"" Requirements for vim-snipmate (see below)
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'tomtom/tlib_vim'
+"" Support for Textmate-style snippits, and a library of snippits
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'honza/snipmate-snippets'
+"" Puppet syntax, snippits for snipmate, etc.
+NeoBundle 'rodjek/vim-puppet'
+"" Advanced matching for %
+NeoBundle 'matchit.zip'
+"" Scala language
+NeoBundle 'derekwyatt/vim-scala'
 
 " NOTE! This must be set after Vundle Bundles declared
 " Attempt to determine the type of a file based on its name and possibly its

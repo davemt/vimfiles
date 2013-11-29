@@ -2,8 +2,7 @@ Installation
 ============
 
 1. Install MONACO.TTF font if your system does not have it
-2. Replace ~/.vim with the contents of this repo
-3. Run ./bootstrap.sh
+2. Run ./bootstrap.sh
 
 Requirements
 ------------
@@ -17,11 +16,11 @@ installed version.  It comes compiled with many useful/required options.
 Comments
 ========
 
-* Vundle for plugin management -- plugin files get distributed across various
-  directories in .vim so it is hard to track them down and add/remove.  The
-  pathogen and Vundle plug-ins resolve this issue by modifying the vim runtime
-  path to look in self-contained 'bundle' directories, one per plug-in.  Vundle
-  also handles downloading and installation of bundles automatically!
+* NeoBundle for plugin management -- plugin files get distributed across
+  various directories in .vim so it is hard to track them down and add/remove.
+  The pathogen/Vundle/NeoBundle plugins resolve this issue by modifying the vim
+  runtime path to look in self-contained 'bundle' directories, one per plug-in.
+  Vundle/NeoBundle also download and install bundles automatically!
 * See vimrc for list of plug-ins installed
 * The overall display is kept simple
     - no line numbers (use :<number> to jump to lines!)
