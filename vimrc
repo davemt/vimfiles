@@ -155,6 +155,8 @@ NeoBundle 'rodjek/vim-puppet'
 NeoBundle 'matchit.zip'
 "" Scala language
 NeoBundle 'derekwyatt/vim-scala'
+"" Golang
+NeoBundle 'fatih/vim-go'
 
 " NOTE! This must be set after Vundle Bundles declared
 " Attempt to determine the type of a file based on its name and possibly its
@@ -162,8 +164,17 @@ NeoBundle 'derekwyatt/vim-scala'
 " plugins that are filetype specific.
 filetype indent plugin on
 
+"
 " Plug-in settings and key mappings
+"
+
 map <Leader>t :execute 'NERDTreeToggle' . getcwd()<Esc>
 map <Leader>T :execute 'NERDTree'<Esc>
 map <Leader>f :CommandT<Esc>
+
+" pyflakes
 let g:pyflakes_use_quickfix=0
+
+" vim-go
+" any gofmt-on-save errors cause quickfix to pop up -- annoying
+let g:go_fmt_fail_silently = 0
