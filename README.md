@@ -8,7 +8,8 @@ Requirements
 ------------
 
 The 'Command-T' module requires ruby, and also has a compilation step that may
-require the ruby development package (e.g. apt-get install ruby-dev).
+require the ruby development package (e.g. `apt-get install ruby-dev`, or on OSX
+you can install Xcode Developer tools with `xcode-select --install`).
 
 If you are running on Mac OSX, you'll want to use MacVim rather than the pre-
 installed version.  It comes compiled with many useful/required options.
