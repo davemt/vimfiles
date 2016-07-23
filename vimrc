@@ -157,6 +157,8 @@ NeoBundle 'matchit.zip'
 NeoBundle 'derekwyatt/vim-scala'
 "" Golang
 NeoBundle 'fatih/vim-go'
+"" Javascript
+NeoBundle 'pangloss/vim-javascript'
 
 " NOTE! This must be set after Vundle Bundles declared
 " Attempt to determine the type of a file based on its name and possibly its
