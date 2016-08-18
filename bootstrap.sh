@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 set -e
 
 repo_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -15,12 +15,13 @@ mkdir -p ~/.vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 # install bundles
-vim +NeoBundleInstall <(echo "Plugin installations complete.  Please quit Vim to continue.")
+vim +NeoBundleUpdate +qall
+
+# install golang commands used by vim-go
+vim +GoInstallBinaries +qall
 
 # extra install steps required for 'Command-T' plugin
 pushd ~/.vim/bundle/Command-T/ruby/command-t/
 ruby extconf.rb
 make
 popd
-
-which guru >/dev/null || echo "!!! Could not find 'guru' command used by go-vim plugin. See https://godoc.org/golang.org/x/tools/cmd/guru"
