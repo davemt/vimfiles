@@ -113,17 +113,14 @@ nnoremap <S-space> zO
 
 if has('vim_starting')
   set nocompatible               " Be iMproved
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath^=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " NeoBundle Bundles
 " NOTE: comments after Bundle commands are not allowed
 "
-" TODO this still needed?
-filetype off " required! it is turned on after Bundles are declared
-
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -159,6 +156,8 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'fatih/vim-go'
 "" Javascript
 NeoBundle 'pangloss/vim-javascript'
+
+call neobundle#end()
 
 " NOTE! This must be set after Vundle Bundles declared
 " Attempt to determine the type of a file based on its name and possibly its
