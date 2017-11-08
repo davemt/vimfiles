@@ -174,6 +174,9 @@ map <Leader>t :execute 'NERDTreeToggle' . getcwd()<Esc>
 map <Leader>T :execute 'NERDTree'<Esc>
 map <Leader>f :CommandT<Esc>
 
+" Command-T
+let g:CommandTMaxFiles=100000
+
 " pyflakes
 let g:pyflakes_use_quickfix=0
 
