@@ -16,6 +16,7 @@ set wildmenu        " enhanced command-line 'wildchar' (e.g. <Tab>) completion
 if has("gui_running")
   set guioptions-=m   " remove menu bar
   set guioptions-=T   " remove toolbar
+  set guioptions+=a   " yank to system clipboard
   colorscheme railscasts
   " GVim
   if has("gui_gtk2")
