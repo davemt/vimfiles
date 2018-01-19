@@ -157,6 +157,14 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'fatih/vim-go'
 "" Javascript
 NeoBundle 'pangloss/vim-javascript'
+"" TICKScript
+NeoBundle 'nathanielc/vim-tickscript'
+"" Elixir
+NeoBundle 'elixir-editors/vim-elixir'
+"" Nginx
+NeoBundle 'chr4/nginx.vim'
+"" Roku BrightScript
+NeoBundle 'chooh/brightscript.vim'
 
 call neobundle#end()
 
