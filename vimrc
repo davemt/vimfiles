@@ -198,3 +198,10 @@ let g:go_fmt_fail_silently = 0
 " auto-format on save rather than requiring @format tag for files
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.json,*.graphql PrettierAsync
+" formatting rules for vim-prettier
+" equivalent to: prettier --print-width 100 --single-quote --trailing-comma all
+let g:prettier#config#arrow_parens = 'avoid'          " prettier default
+let g:prettier#config#bracket_spacing = 'true'        " prettier default
+let g:prettier#config#jsx_bracket_same_line = 'false' " prettier default
+let g:prettier#config#parser = 'babylon'              " prettier default
+let g:prettier#config#print_width = 100               " custom override
