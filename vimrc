@@ -157,6 +157,8 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'fatih/vim-go'
 "" Javascript
 NeoBundle 'pangloss/vim-javascript'
+"" Prettier - auto format javascript, less, scss, css, json, graphql, md
+NeoBundle 'prettier/vim-prettier'
 "" TICKScript
 NeoBundle 'nathanielc/vim-tickscript'
 "" Elixir
