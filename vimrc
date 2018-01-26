@@ -193,3 +193,8 @@ let g:pyflakes_use_quickfix=0
 " vim-go
 " any gofmt-on-save errors cause quickfix to pop up -- annoying
 let g:go_fmt_fail_silently = 0
+
+" vim-prettier
+" auto-format on save rather than requiring @format tag for files
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.json,*.graphql PrettierAsync
