@@ -53,12 +53,6 @@ set autoindent                  " copy current line indent to next line
 set backspace=start,indent,eol  " what we can backspace over
 set virtualedit=block           " see :h virtualedit
 
-" Display hack: add left padding with a dark background
-if has("gui_running")
-    set foldcolumn=3
-    highlight FoldColumn guibg=gray15
-endif
-
 " turn on syntax highlighting
 let java_highlight_java_lang_ids=1
 syntax enable
