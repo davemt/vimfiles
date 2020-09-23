@@ -176,6 +176,8 @@ NeoBundle 'chooh/brightscript.vim'
 "" Markdown (tabular plugin is required to come before)
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
+"" JSON highlighting
+NeoBundle 'elzr/vim-json'
 
 call neobundle#end()
 
