@@ -173,6 +173,9 @@ NeoBundle 'elixir-editors/vim-elixir'
 NeoBundle 'chr4/nginx.vim'
 "" Roku BrightScript
 NeoBundle 'chooh/brightscript.vim'
+"" Markdown (tabular plugin is required to come before)
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'plasticboy/vim-markdown'
 
 call neobundle#end()
 
