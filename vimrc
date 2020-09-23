@@ -207,3 +207,6 @@ let g:go_fmt_fail_silently = 0
 
 " vim-prettier
 " (Removed customizations for now.)
+
+" vim-markdown
+let g:markdown_fenced_languages = ['html', 'css', 'scss', 'sql', 'javascript', 'go', 'python', 'bash=sh', 'c', 'ruby', 'json']
