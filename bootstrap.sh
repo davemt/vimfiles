@@ -16,5 +16,13 @@ mkdir -p ~/.vim/plugged
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Golang is required to exist before installing vim-go
+which -s go ||
+    (echo "golang is required -- 'brew install go' for OSX."; exit 1)
+
+# yarn is required for vim-prettier plugin -- others?
+which -s yarn ||
+    (echo "yarn is required -- 'brew install yarn' for OSX."; exit 1)
+
 # install bundles
 vim +PlugInstall +qall
