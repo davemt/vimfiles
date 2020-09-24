@@ -115,6 +115,9 @@ call plug#begin('~/.vim/plugged')
 "
 " NOTE: comments after Bundle commands are not allowed
 
+"" Fuzzy file finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 "" Highlight python errors (syntax, import, etc.)
 Plug 'kevinw/pyflakes-vim'
 "" NERD Tree file explorer
@@ -172,12 +175,12 @@ filetype indent plugin on
 " Plug-in settings and key mappings
 "
 
+" NerdTree
 map <Leader>t :execute 'NERDTreeToggle' . getcwd()<Esc>
 map <Leader>T :execute 'NERDTree'<Esc>
-map <Leader>f :CommandT<Esc>
 
-" Command-T
-let g:CommandTMaxFiles=100000
+" fzf
+map <Leader>f :Files<Esc>
 
 " pyflakes
 let g:pyflakes_use_quickfix=0
