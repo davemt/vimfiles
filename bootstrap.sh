@@ -18,19 +18,3 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 # install bundles
 vim +PlugInstall +qall
-
-# extra install steps required for 'Command-T' plugin
-pushd ~/.vim/bundle/Command-T/ruby/command-t/
-ruby extconf.rb
-make
-popd
-
-# extra install step required for vim-prettier
-pushd ~/.vim/bundle/vim-prettier
-which -s yarn || \
-  (echo "yarn is required -- 'brew install yarn' for OSX."; popd; exit 1)
-yarn install
-popd
-
-# TODO: can we capture commands like ^^ this in ~/.vimrc if we migrate to a new
-# plugin manager from NeoBundle?

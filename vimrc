@@ -142,7 +142,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "" Javascript
 Plug 'pangloss/vim-javascript'
 "" Prettier - auto format javascript, less, scss, css, json, graphql, md
-Plug 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "" TICKScript
 Plug 'nathanielc/vim-tickscript'
 "" Elixir
