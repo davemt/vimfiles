@@ -19,9 +19,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # install bundles
 vim +PlugInstall +qall
 
-# install golang commands used by vim-go
-vim +GoInstallBinaries +qall
-
 # extra install steps required for 'Command-T' plugin
 pushd ~/.vim/bundle/Command-T/ruby/command-t/
 ruby extconf.rb

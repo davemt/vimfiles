@@ -138,7 +138,7 @@ Plug 'vim-scripts/matchit.zip'
 "" Scala language
 Plug 'derekwyatt/vim-scala'
 "" Golang
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "" Javascript
 Plug 'pangloss/vim-javascript'
 "" Prettier - auto format javascript, less, scss, css, json, graphql, md
