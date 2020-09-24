@@ -101,82 +101,66 @@ nnoremap <space> za
 vnoremap <space> zf
 nnoremap <S-space> zO
 
-" NeoBundle for plug-in management
-"
-" (see https://github.com/shougo/neobundle.vim)
-"
-" Brief help
-"  :NeoBundleList          - list configured bundles
-"  :NeoBundleInstall(!)    - install(update) bundles
-"  :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" See :h neobundle for more details
-
 if has('vim_starting')
   set nocompatible               " Be iMproved
   set runtimepath^=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call plug#begin('~/.vim/plugged')
 
-" NeoBundle Bundles
-" NOTE: comments after Bundle commands are not allowed
 "
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
+" Plugins (uses vim-plug)
+"
+" See https://github.com/junegunn/vim-plug
+"
+" NOTE: comments after Bundle commands are not allowed
 
-" Recommended to install
-" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimproc'
-
-"" Command-T plug-in: fuzzy-find and open files *very* quickly
-NeoBundle 'Command-T'
 "" Highlight python errors (syntax, import, etc.)
-NeoBundle 'kevinw/pyflakes-vim'
+Plug 'kevinw/pyflakes-vim'
 "" NERD Tree file explorer
-NeoBundle 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 "" Really awesome git wrapper
-NeoBundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 "" Manipulate 'surroundings': parentheses, brackets, quotes, HTML tags, and more
-NeoBundle 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 "" Allows using '.' to repeat plugin maps, not just built-in commands
-NeoBundle 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 "" Requirements for vim-snipmate (see below)
-NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 "" Support for Textmate-style snippits, and a library of snippits
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'honza/vim-snippets'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 "" Puppet syntax, snippits for snipmate, etc.
-NeoBundle 'rodjek/vim-puppet'
+Plug 'rodjek/vim-puppet'
 "" Advanced matching for %
-NeoBundle 'matchit.zip'
+Plug 'vim-scripts/matchit.zip'
 "" Scala language
-NeoBundle 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala'
 "" Golang
-NeoBundle 'fatih/vim-go'
+Plug 'fatih/vim-go'
 "" Javascript
-NeoBundle 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 "" Prettier - auto format javascript, less, scss, css, json, graphql, md
-NeoBundle 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier'
 "" TICKScript
-NeoBundle 'nathanielc/vim-tickscript'
+Plug 'nathanielc/vim-tickscript'
 "" Elixir
-NeoBundle 'elixir-editors/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 "" Nginx
-NeoBundle 'chr4/nginx.vim'
+Plug 'chr4/nginx.vim'
 "" Roku BrightScript
-NeoBundle 'chooh/brightscript.vim'
+Plug 'chooh/brightscript.vim'
 "" Markdown (tabular plugin is required to come before)
-NeoBundle 'godlygeek/tabular'
-NeoBundle 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 "" JSON highlighting
-NeoBundle 'elzr/vim-json'
+Plug 'elzr/vim-json'
 "" Goyo and Limelight = Distraction-free mode
-NeoBundle 'junegunn/goyo.vim'
-NeoBundle 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
-call neobundle#end()
+call plug#end()
 
 " NOTE! This must be set after Vundle Bundles declared
 " Attempt to determine the type of a file based on its name and possibly its

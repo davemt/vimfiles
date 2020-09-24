@@ -11,12 +11,13 @@ ln -s ~/.vim/vimrc ~/.vimrc && echo "Linked $repo_dir/vimrc to ~/.vimrc"
 ln -s ~/.vim/ideavimrc ~/.ideavimrc && echo "Linked $repo_dir/ideavimrc to ~/.ideavimrc"
 sleep 3 # let user see what we've done
 
-# download NeoBundle
-mkdir -p ~/.vim/bundle
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+# download plug.vim (vim-plug)
+mkdir -p ~/.vim/plugged
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install bundles
-vim +NeoBundleUpdate +qall
+vim +PlugInstall +qall
 
 # install golang commands used by vim-go
 vim +GoInstallBinaries +qall
