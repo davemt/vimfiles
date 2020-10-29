@@ -7,21 +7,16 @@ Installation
 Requirements
 ------------
 
-The 'Command-T' module requires ruby, and also has a compilation step that may
-require the ruby development package (e.g. `apt-get install ruby-dev`, or on OSX
-you can install Xcode Developer tools with `xcode-select --install`).
+This configuration has mostly been tested on a Mac with MacVim. Other platforms
+and Vim variants might have minor issues.
 
-If you are running on Mac OSX, you'll want to use MacVim rather than the pre-
-installed version.  It comes compiled with many useful/required options.
+* golang - `brew install go`
+* yarn - `brew install yarn`
 
 Comments
 ========
 
-* NeoBundle for plugin management -- plugin files get distributed across
-  various directories in .vim so it is hard to track them down and add/remove.
-  The pathogen/Vundle/NeoBundle plugins resolve this issue by modifying the vim
-  runtime path to look in self-contained 'bundle' directories, one per plug-in.
-  Vundle/NeoBundle also download and install bundles automatically!
+* vim-plug for plugin management
 * See vimrc for list of plug-ins installed
 * The overall display is kept simple
     - no line numbers (use :<number> to jump to lines!)
@@ -40,9 +35,9 @@ Comments
 TODO
 ====
 
+* Evaluate Neovim
 * In-buffer debugging
-* # spaces vary for filetype (do just ruby, python, java, 4 default)
+* number of spaces vary for filetype (do just ruby, python, java, 4 default)
 * Language-specific folding (python folding -- in video?, java), default
   based on indent
-* Better highlight trailing whitespace
 * Smarter autocomplete -- omnicomplete?
