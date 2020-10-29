@@ -30,7 +30,7 @@ Comments
       :noh sucks)
 * Custom plugin key mappings
     - ,t opens NERD Tree file browser
-    - ,f opens fuzzy-find-file ('Command-T' plugin)
+    - ,f opens fuzzy-find-file ('fzf' plugin)
 
 TODO
 ====
