@@ -103,7 +103,6 @@ nnoremap <S-space> zO
 
 if has('vim_starting')
   set nocompatible               " Be iMproved
-  set runtimepath^=~/.vim/bundle/neobundle.vim/
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -113,7 +112,7 @@ call plug#begin('~/.vim/plugged')
 "
 " See https://github.com/junegunn/vim-plug
 "
-" NOTE: comments after Bundle commands are not allowed
+" NOTE: comments after Plug commands are not allowed
 
 "" Fuzzy file finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
