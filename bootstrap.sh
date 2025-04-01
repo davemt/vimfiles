@@ -3,6 +3,20 @@ set -e
 
 repo_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# check requirements
+#
+# Golang is required to exist before installing vim-go
+which -s go ||
+    (echo "golang is required -- 'brew install go' for OSX."; exit 1)
+
+# yarn is required for vim-prettier plugin -- others?
+which -s yarn ||
+    (echo "yarn is required -- 'brew install yarn' for OSX."; exit 1)
+
+# node is required for plugin installation -- possibly vim-prettier?
+which -s node ||
+    (echo "node is required -- 'brew install node' for OSX."; exit 1)
+
 echo "Linking this repo to the active Vim configuration..."
 test -e ~/.vim && echo "~/.vim directory already exists, refusing to continue." && exit
 test -e ~/.vimrc && echo "~/.vimrc file exists, refusing to continue." && exit
@@ -15,14 +29,6 @@ sleep 3 # let user see what we've done
 mkdir -p ~/.vim/plugged
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# Golang is required to exist before installing vim-go
-which -s go ||
-    (echo "golang is required -- 'brew install go' for OSX."; exit 1)
-
-# yarn is required for vim-prettier plugin -- others?
-which -s yarn ||
-    (echo "yarn is required -- 'brew install yarn' for OSX."; exit 1)
 
 # install bundles
 vim +PlugInstall +qall
