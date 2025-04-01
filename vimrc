@@ -118,7 +118,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "" Highlight python errors (syntax, import, etc.)
-Plug 'kevinw/pyflakes-vim'
+"Plug 'kevinw/pyflakes-vim'
 "" NERD Tree file explorer
 Plug 'preservim/nerdtree'
 "" Really awesome git wrapper
@@ -157,7 +157,7 @@ Plug 'chooh/brightscript.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 "" JSON highlighting
-Plug 'elzr/vim-json'
+"Plug 'elzr/vim-json'
 "" Goyo and Limelight = Distraction-free mode
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
