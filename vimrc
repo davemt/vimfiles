@@ -2,6 +2,7 @@
 " Read over this entire file carefully!
 "
 set nocompatible    " be improved vi!
+set runtimepath^=~/.vim " so neovim finds ~/.vim (e.g. autoload/plug.vim)
 set showcmd         " show commands in bottom right-hand corner
 set laststatus=2    " always show the status line
 set ruler           " line and col # of cursor
@@ -26,6 +27,8 @@ if has("gui_running")
   elseif has("gui_win32") || has("gui_macvim")
     set guifont=Monaco:h9.1 " (untested)
   endif
+elseif has("nvim")
+  colorscheme railscasts
 else
   " TODO alternative: use 'godlygeek/csapprox' plugin, or for 256-color terms
   "  there is also a 256-color railscasts theme out there.
